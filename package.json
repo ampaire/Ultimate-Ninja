@@ -1,0 +1,23 @@
+{
+  "name": "phaserrpg",
+  "version": "1.0.0",
+  "description": "Phaser Js RPG game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ampaire/phaserRPG.git"
+  },
+  "keywords": [
+    "Phaser",
+    "RPG"
+  ],
+  "author": "Phemia Ampaire",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ampaire/phaserRPG/issues"
+  },
+  "homepage": "https://github.com/ampaire/phaserRPG#readme"
+}
