@@ -5,10 +5,9 @@ const webpack = require('webpack');
 module.exports = {
   mode: 'development',
   entry: './src/index.js',
-  'production-dependencies': ['phaser'],
   output: {
-    filename: 'main.js',
-    path: path.resolve(__dirname, 'dist'),
+    filename: 'app.js',
+    path: path.resolve(__dirname, 'build'),
   },
   module: {
     rules: [
@@ -28,7 +27,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        include: path.resolve(__dirname, 'src/'),
+        include: path.resolve(__dirname, 'src'),
         use: {
           loader: 'babel-loader',
           options: {
@@ -39,17 +38,17 @@ module.exports = {
     ],
   },
   devServer: {
-    contentBase: path.resolve(__dirname, 'dist'),
+    contentBase: path.resolve(__dirname, 'build'),
   },
   plugins: [
     new CopyWebpackPlugin([
       {
         from: path.resolve(__dirname, 'index.html'),
-        to: path.resolve(__dirname, 'dist'),
+        to: path.resolve(__dirname, 'build'),
       },
       {
         from: path.resolve(__dirname, 'assets', '**', '*'),
-        to: path.resolve(__dirname, 'dist'),
+        to: path.resolve(__dirname, 'build'),
       },
     ]),
     new webpack.DefinePlugin({

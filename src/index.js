@@ -1,11 +1,37 @@
-import 'phaser';
+/* eslint-disable no-unused-vars */
+import Phaser from 'phaser';
 
-import { SimpleScene } from './scenes/simple-scene';
+import Model from './DOM/model';
+import BootScene from './sceneManager/bootScene';
+import PreloaderScene from './sceneManager/preloader';
+import TitleScene from './sceneManager/gameTitle';
+import OptionsScene from './sceneManager/gameOptions';
+import InstructionsScene from './sceneManager/gameInstructions';
+import GameScene from './sceneManager/battleScene';
+import PlayerInfo from './sceneManager/getName';
+import ScoresScene from './sceneManager/gameScore';
 
-const gameConfig = {
-  width: 680,
-  height: 400,
-  scene: SimpleScene,
-};
+import config from './Helpers/config';
 
-new Phaser.Game(gameConfig);
+const gameConfig = Object.assign(config, {
+  scene: [
+    BootScene,
+    PreloaderScene,
+    TitleScene,
+    OptionsScene,
+    InstructionsScene,
+    GameScene,
+    PlayerInfo,
+    ScoresScene,
+  ],
+});
+
+class Game extends Phaser.Game {
+  constructor() {
+    super(gameConfig);
+    const model = new Model();
+    this.globals = { model, bgMusic: null };
+  }
+}
+
+const game = new Game();

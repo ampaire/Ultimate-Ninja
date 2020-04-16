@@ -1,16 +1,12 @@
 {
   "presets": [
+    "@babel/preset-env"
+  ],
+  "plugins": [
     [
-      "@babel/env",
+      "@babel/plugin-transform-runtime",
       {
-        "targets": {
-          "browsers": [
-            ">0.25%",
-            "not ie 11",
-            "not op_mini all"
-          ]
-        },
-        "modules": false
+        "regenerator": true
       }
     ]
   ]
