@@ -13,19 +13,23 @@ export default class extends Phaser.Scene {
     this.hasKey = false;
   }
 
-  preload(){
+  preload() {
+    this.load.audio('enemySound', ['assets/audio/stomp.wav']);
+    this.load.audio('fightEnemy', ['assets/audio/Trap_02.mp3']);
+    this.load.audio('winSound', ['assets/audio/Jingle_Win.mp3']);
+    this.load.audio('gameBkgrnd', ['assets/audio/battleThemeA.mp3']);
+    this.load.audio('gameOver', ['assets/audio/game-over.wav']);
+  }
+
+  create() {
 
   }
 
-  cretae(){
+  update() {
 
   }
 
-  update(){
+  restart() {
 
-  }
-
-  restart(){
-    
   }
 }
