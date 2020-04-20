@@ -20,10 +20,15 @@ export default class InstructionsScene extends Phaser.Scene {
     });
     instructionsText.setOrigin(0.5, 0.5);
     instructionsText.setText(` 
-    To play the game<hr/> Use arrows to spacebar to slide <br/>
-    towards the enemy and hit him. The enemy<br/> will also
-    slide to you to hit you <br/> The game ends when one's health bar is done!<br/> Enjoy
-    the adventure`);
+    To play the game,
+    Attack the enemy,
+    Then the enemy attacks you back,
+    To dodge the enemies' attack,
+    Use the left and right Keys.
+    If you pass one level,
+    More enemies are added to the field,
+    Fight them all to become the Ultimate ninja.
+    `);
     this.menuButton = new Button(
       this,
       400,

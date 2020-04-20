@@ -4,6 +4,8 @@
 /* eslint-disable no-unused-expressions */
 
 import Phaser from 'phaser';
+import Button from '../DOM/button';
+import config from '../Helpers/config';
 
 export default class PlayerInfo extends Phaser.Scene {
   constructor() {
@@ -16,24 +18,23 @@ export default class PlayerInfo extends Phaser.Scene {
   }
 
   create() {
-    const htmlDom = this.add.dom(400, 200).createFromCache('info');
-    htmlDom.addListener('click');
-    htmlDom.on('click', e => {
-      if (e.target.name === 'submit') {
-        this.player = htmlDom.getChildByName('player');
-        localStorage.setItem('name', this.player.value);
-        if (this.player.value !== '') {
-          htmlDom.removeListener('click');
-          htmlDom.setVisible(false);
-          this.scene.start('GameScene', {
-            player: this.player.value,
-          });
-        } else {
-          alert('Please enter your name');
-          throw new Error("Error: Missing character's name");
-        }
-        return this.player.value;
-      }
+    const htmlDom = this.add.dom(config.width / 2, config.height / 2 - 50).createFromCache('info');
+    const { width } = this.cameras.main;
+    const { height } = this.cameras.main;
+    const getNameText = this.make.text({
+      x: width / 2,
+      y: height / 2 - 100,
+      text: '',
+      style: {
+        font: '30px Amita',
+        fill: '#ffff',
+      },
     });
+    getNameText.setOrigin(0.5, 0.5);
+    getNameText.setText(` 
+    Good day ninja, Enter your name your name please......
+    `);
+    this.scoresButton = new Button(this, config.width / 2, config.height / 2 + 50, 'btnStock1', 'btnStock2', 'Start Game', 'battleScene');
+    this.menuButton = new Button(this, 400, 500, 'btnStock1', 'btnStock2', 'Menu', 'TitleScene');
   }
 }

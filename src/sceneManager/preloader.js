@@ -25,7 +25,7 @@ export default class PreloaderScene extends Phaser.Scene {
       y: height / 2 - 50,
       text: 'Loading...',
       style: {
-        font: '25px Amita',
+        font: '20px monospace',
         fill: '#ffffff',
       },
     });
@@ -36,7 +36,7 @@ export default class PreloaderScene extends Phaser.Scene {
       y: height / 2 - 5,
       text: '0%',
       style: {
-        font: '18px Amita',
+        font: '18px monospace',
         fill: '#ffffff',
       },
     });
@@ -47,7 +47,7 @@ export default class PreloaderScene extends Phaser.Scene {
       y: height / 2 + 50,
       text: '',
       style: {
-        font: '18px Amita',
+        font: '18px monospace',
         fill: '#ffffff',
       },
     });
@@ -75,13 +75,12 @@ export default class PreloaderScene extends Phaser.Scene {
 
     this.timedEvent = this.time.delayedCall(5000, this.ready, [], this);
 
-
     this.load.image('btnStock1', 'assets/buttonStock1.png');
     this.load.image('btnStock2', 'assets/buttonStock2.png');
-    this.load.image('logo', 'assets/logo.png');
+    this.load.image('phaserLogo', 'assets/logo.png');
     this.load.image('box', 'assets/grey_box.png');
-    this.load.image('mage', 'assets/monster_24_orc.png');
-    this.load.audio('loadingMusic', ['assets/audio/bgm.mp3']);
+    this.load.image('checkedBox', 'assets/blue_boxCheckmark.png');
+    this.load.audio('bgMusic', ['assets/audio/battleThemeA.mp3']);
   }
 
   ready() {

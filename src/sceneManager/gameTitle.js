@@ -1,3 +1,4 @@
+/* eslint-disable class-methods-use-this */
 import Phaser from 'phaser';
 import config from '../Helpers/config';
 import Button from '../DOM/button';
@@ -20,11 +21,27 @@ export default class TitleScene extends Phaser.Scene {
     this.instructionsButton = new Button(this, config.width / 2, config.height / 2 + 200, 'btnStock1', 'btnStock2', 'Help', 'InstructionsScene');
 
     this.model = this.sys.game.globals.model;
-    if (this.model.musicOn === true && this.model.loadingMusicPlaying === false) {
-      this.loadingMusic = this.sound.add('loadingMusic', { volume: 0.6, loop: true });
-      this.loadingMusic.play();
-      this.model.loadingMusicPlaying = true;
-      this.sys.game.globals.loadingMusic = this.loadingMusic;
+    if (this.model.musicOn === true && this.model.bgMusicPlaying === false) {
+      this.bgMusic = this.sound.add('bgMusic', { volume: 0.5, loop: true });
+      this.bgMusic.play();
+      this.model.bgMusicPlaying = true;
+      this.sys.game.globals.bgMusic = this.bgMusic;
     }
+  }
+
+  centerButton(gameObject, offset = 0) {
+    Phaser.Display.Align.In.Center(
+      gameObject,
+      this.add.zone(
+        config.width / 2,
+        config.height / 2 - offset * 100,
+        config.width,
+        config.height,
+      ),
+    );
+  }
+
+  centerButtonText(gameText, gameButton) {
+    Phaser.Display.Align.In.Center(gameText, gameButton);
   }
 }
