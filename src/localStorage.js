@@ -1,10 +1,10 @@
-const player = (params) => {
+const currentPlayer = (params) => {
   const currentP = JSON.stringify(params);
   window.localStorage.setItem('currentP', currentP);
   return (currentP);
 };
 
-const getplayer = () => {
+const getCurrentPlayer = () => {
   const currentP = localStorage.getItem('currentP');
   return JSON.parse(currentP);
 };
@@ -15,11 +15,11 @@ const currentScore = (params = 0) => {
   return (currentP);
 };
 
-const getScore = () => {
+const getCurrentScore = () => {
   const currentP = localStorage.getItem('currentS');
   return JSON.parse(currentP);
 };
 
 export {
-  player, getplayer, currentScore, getScore,
+  currentPlayer, getCurrentPlayer, currentScore, getCurrentScore,
 };
