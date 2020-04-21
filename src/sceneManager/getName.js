@@ -23,7 +23,7 @@ export default class PlayerInfo extends Phaser.Scene {
     const { width } = this.cameras.main;
     const { height } = this.cameras.main;
 
-    this.scoresButton = new Button(this, config.width / 2, config.height / 2 + 50, 'btnStock1', 'btnStock2', 'Start Game', 'battleScene');
+    this.scoresButton = new Button(this, config.width / 2, config.height / 2 + 50, 'btnStock1', 'btnStock2', 'Start Game', 'GameScene');
     this.menuButton = new Button(this, 400, 500, 'btnStock1', 'btnStock2', 'Menu', 'TitleScene');
     const getNameText = this.make.text({
       x: width / 2,

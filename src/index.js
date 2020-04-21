@@ -7,7 +7,7 @@ import PreloaderScene from './sceneManager/preloader';
 import TitleScene from './sceneManager/gameTitle';
 import OptionsScene from './sceneManager/gameOptions';
 import InstructionsScene from './sceneManager/gameInstructions';
-import { BattleScene, UIScene } from './sceneManager/battleScene';
+import GameScene from './sceneManager/battleScene';
 import PlayerInfo from './sceneManager/getName';
 import ScoresScene from './sceneManager/gameScore';
 
@@ -20,8 +20,7 @@ const gameConfig = Object.assign(config, {
     TitleScene,
     OptionsScene,
     InstructionsScene,
-    BattleScene,
-    UIScene,
+    GameScene,
     PlayerInfo,
     ScoresScene,
   ],
