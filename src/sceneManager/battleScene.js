@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 /* eslint-disable no-multi-assign */
 /* eslint-disable no-unused-vars */
 
@@ -67,8 +68,8 @@ export default class GameScene extends Phaser.Scene {
       frameHeight: 53,
     });
     this.load.spritesheet('enemies', './assets/enemies.png', {
-      frameWidth: 32,
-      frameHeight: 32,
+      frameWidth: 80,
+      frameHeight: 80,
     });
     this.load.audio('gameOver', ['assets/audio/game-over-2.wav']);
   }
@@ -79,41 +80,76 @@ export default class GameScene extends Phaser.Scene {
     this.graphics = this.add.graphics();
     this.graphics.lineStyle(1, 0xffffff);
     this.graphics.fillStyle(0x8B0000, 1);
-    this.graphics.strokeRect(10, 380, 290, 150);
-    this.graphics.fillRect(10, 380, 290, 150);
-    this.graphics.strokeRect(310, 380, 190, 150);
-    this.graphics.fillRect(310, 380, 190, 150);
-    this.graphics.strokeRect(510, 380, 280, 150);
-    this.graphics.fillRect(510, 380, 280, 150);
+    this.graphics.strokeRect(10, 420, 290, 150);
+    this.graphics.fillRect(10, 420, 290, 150);
+    this.graphics.strokeRect(310, 420, 190, 150);
+    this.graphics.fillRect(310, 420, 190, 150);
+    this.graphics.strokeRect(510, 420, 280, 150);
+    this.graphics.fillRect(510, 420, 280, 150);
 
     const warrior = new PlayerCharacter(this, config.width / 2 - 200, config.height / 2, 'disciple', 120, 100);
     this.add.existing(warrior);
-
-    const mushroom = new Enemy(this, config.width / 2 + 200, config.height / 2, 'enemies', 0, 'Poisonous mushroom', 120);
-    this.add.existing(mushroom);
-
-    const ant = new Enemy(this, config.width / 2 + 200, config.height / 2, 'enemies', 1, 'Ant', 120);
-    this.add.existing(ant);
-
-    const duck = new Enemy(this, config.width / 2 + 200, config.height / 2, 'enemies', 3, 'Mad Duck', 120);
-    this.add.existing(duck);
-
-    const pig = new Enemy(this, config.width / 2 + 200, config.height / 2, 'enemies', 4, 'Serious Pig', 120);
-    this.add.existing(pig);
-
-    const flower = new Enemy(this, config.width / 2 + 200, config.height / 2, 'enemies', 5, 'Magic Flower', 120);
-    this.add.existing(flower);
-
     this.heroes = [warrior];
 
-    this.enemies = [mushroom, ant, duck, pig, flower];
+    const randomNum = getRndInteger(1, 3);
 
-    this.units = this.heroes.concat(this.enemies);
+    if (randomNum == 1) {
+      const mushroom = new Enemy(this, config.width / 2 + 200, config.height / 2, 'enemies', 0, 'Shroom', 20);
+      const ent = new Enemy(this, config.width / 2 + 200, config.height / 2, 'enemies', 1, 'Ent', 20);
+      const duck = new Enemy(this, config.width / 2 + 200, config.height / 2, 'enemies', 3, 'Mad Duck', 20);
+      const pig = new Enemy(this, config.width / 2 + 200, config.height / 2, 'enemies', 4, 'Magik Pig', 20);
+      const flower = new Enemy(this, config.width / 2 + 200, config.height / 2, 'enemies', 5, 'Flower', 20);
 
-    scoreText = this.add.text(50, 16, `score: ${this.score}`, {
-      fontSize: '32px',
-      fill: '#000',
-    });
+      const monster1 = [mushroom, ent, duck, pig, flower];
+
+      const enemy1 = monster1[getRndInteger(0, monster1.length)];
+      this.add.existing(enemy1);
+      this.enemies = [enemy1];
+
+      this.units = this.heroes.concat(this.enemies);
+    } else if (randomNum == 2) {
+      const mushroom = new Enemy(this, config.width / 2 + 200, config.height / 2, 'enemies', 0, 'Shroom', 20);
+      const ent = new Enemy(this, config.width / 2 + 200, config.height / 2, 'enemies', 1, 'Ent', 20);
+      const duck = new Enemy(this, 210, 70, 'enemies', 3, 'Mad Duck', 20);
+      const pig = new Enemy(this, 210, 70, 'enemies', 4, 'Magik Pig', 20);
+
+      const monster1 = [mushroom, ent];
+      const monster2 = [duck, pig];
+
+      const enemy1 = monster1[getRndInteger(0, monster1.length)];
+      const enemy2 = monster2[getRndInteger(0, monster2.length)];
+
+      this.add.existing(enemy1);
+      this.add.existing(enemy2);
+
+      this.enemies = [enemy1, enemy2];
+
+      this.units = this.heroes.concat(this.enemies);
+    } else if (randomNum == 3) {
+      const mushroom = new Enemy(this, config.width / 2 + 200, config.height / 2, 'enemies', 0, 'Shroom', 20);
+      const ent = new Enemy(this, config.width / 2 + 200, config.height / 2, 'enemies', 1, 'Ent', 20);
+      const duck = new Enemy(this, 210, 70, 'enemies', 3, 'Mad Duck', 20);
+      const pig = new Enemy(this, 210, 70, 'enemies', 4, 'Magik Pig', 20);
+      const flower = new Enemy(this, 245, 70, 'enemies', 5, 'Flower', 20);
+
+      const monster1 = [mushroom, ent];
+      const monster2 = [duck, pig];
+      const monster3 = [flower];
+
+      const enemy1 = monster1[getRndInteger(0, monster1.length)];
+      const enemy2 = monster2[getRndInteger(0, monster2.length)];
+      const enemy3 = monster3[getRndInteger(0, monster3.length)];
+
+      this.add.existing(enemy1);
+      this.add.existing(enemy2);
+      this.add.existing(enemy3);
+
+      this.enemies = [enemy1, enemy2, enemy3];
+
+      this.units = this.heroes.concat(this.enemies);
+    }
+
+    this.index = -1;
     gameOverText = this.add.text(400, 300, 'Game Over', {
       fontSize: '64px',
       fill: '#000',
@@ -123,25 +159,9 @@ export default class GameScene extends Phaser.Scene {
 
     this.gameOverSound = this.sound.add('gameOver');
 
-    this.scoreBoard = new Button(
-      this,
-      400,
-      40,
-      'btnStock1',
-      'btnStock2',
-      'Scores',
-      'ScoresScene',
-    );
-
-    this.menuButton = new Button(
-      this,
-      700,
-      40,
-      'btnStock1',
-      'btnStock2',
-      'Menu',
-      'TitleScene',
-    );
+    scoreText = new Button(this, 150, 40, 'btnStock1', 'btnStock2', `score: ${this.score}`).setScale(0.8);
+    this.scoreBoard = new Button(this, 400, 40, 'btnStock1', 'btnStock2', 'Scores', 'ScoresScene').setScale(0.8);
+    this.scoreBoard = new Button(this, 650, 40, 'btnStock1', 'btnStock2', 'Menu', 'TitleScene').setScale(0.8);
   }
 
 
