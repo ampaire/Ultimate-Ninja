@@ -1,3 +1,4 @@
+/* eslint-disable no-empty */
 /* eslint-disable no-plusplus */
 /* eslint-disable eqeqeq */
 /* eslint-disable no-multi-assign */
@@ -286,24 +287,33 @@ export default class GameScene extends Phaser.Scene {
       this.units = this.heroes.concat(this.enemies);
     }
 
-    this.index = -1;
-
     this.menus = this.add.container();
 
-    this.heroesMenu = new HeroesMenu(520, 440, this);
-    this.actionsMenu = new ActionsMenu(320, 440, this);
-    this.enemiesMenu = new EnemiesMenu(20, 440, this);
+    this.heroesMenu = new HeroesMenu(540, 460, this);
+    this.actionsMenu = new ActionsMenu(340, 460, this);
+    this.enemiesMenu = new EnemiesMenu(40, 460, this);
 
     this.currentMenu = this.actionsMenu;
     this.heroesMenu.remap(this.heroes);
     this.enemiesMenu.remap(this.enemies);
 
-    // this.remapHeroes();
-    // this.remapEnemies();
-
     this.menus.add(this.heroesMenu);
     this.menus.add(this.actionsMenu);
     this.menus.add(this.enemiesMenu);
+
+    this.input.keyboard.on('keydown', this.onKeyInput, this);
+
+    if (this.currentMenu) {
+      if (KeyboardEvent.code === 'ArrowUp') {
+        this.currentMenu.moveSelectionUp();
+      } else if (KeyboardEvent.code === 'ArrowDown') {
+        this.currentMenu.moveSelectionDown();
+      } else if (KeyboardEvent.code === 'ArrowRight' || KeyboardEvent.code === 'Shift') {
+
+      } else if (KeyboardEvent.code === 'Space' || KeyboardEvent.code === 'ArrowLeft') {
+        this.currentMenu.confirm();
+      }
+    }
 
 
     this.battleScene = this.scene.get('GameScene');
@@ -320,6 +330,8 @@ export default class GameScene extends Phaser.Scene {
     scoreText = new Button(this, 150, 40, 'btnStock1', 'btnStock2', `score: ${this.score}`).setScale(0.8);
     this.scoreBoard = new Button(this, 400, 40, 'btnStock1', 'btnStock2', 'Scores', 'ScoresScene').setScale(0.8);
     this.scoreBoard = new Button(this, 650, 40, 'btnStock1', 'btnStock2', 'Menu', 'TitleScene').setScale(0.8);
+
+    this.index = -1;
   }
 
 
