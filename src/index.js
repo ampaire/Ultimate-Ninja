@@ -13,6 +13,7 @@ import ScoresScene from './sceneManager/gameScore';
 
 import config from './Helpers/config';
 
+
 const gameConfig = Object.assign(config, {
   scene: [
     BootScene,
