@@ -81,6 +81,21 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('box', 'assets/grey_box.png');
     this.load.image('checkedBox', 'assets/blue_boxCheckmark.png');
     this.load.audio('bgMusic', ['assets/audio/battleThemeA.mp3']);
+
+    this.load.spritesheet('hero1', 'assets/disciple.png', {
+      frameWidth: 48,
+      frameHeight: 53,
+    });
+
+    this.load.spritesheet('hero2', 'assets/disciple.png', {
+      frameWidth: 48,
+      frameHeight: 53,
+    });
+    this.load.image('wizarus', 'assets/map/wizard1.png');
+    this.load.image('wizarus2', 'assets/map/wizard2.png');
+    this.load.image('wizarus3', 'assets/map/wizard3.png');
+    this.load.image('ghostus', 'assets/map/kiranga.png');
+    this.load.image('master', 'assets/mater.png');
   }
 
   ready() {
