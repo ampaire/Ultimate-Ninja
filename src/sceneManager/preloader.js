@@ -91,11 +91,7 @@ export default class PreloaderScene extends Phaser.Scene {
       frameWidth: 48,
       frameHeight: 53,
     });
-    this.load.image('wizarus', 'assets/map/wizard1.png');
-    this.load.image('wizarus2', 'assets/map/wizard2.png');
-    this.load.image('wizarus3', 'assets/map/wizard3.png');
-    this.load.image('ghostus', 'assets/map/kiranga.png');
-    this.load.image('master', 'assets/mater.png');
+    this.load.spritesheet('enemies', 'assets/enemies.png', { frameWidth: 80, frameHeight: 80 });
   }
 
   ready() {
