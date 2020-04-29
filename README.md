@@ -14,7 +14,16 @@ This project's objective was to build a platform game similar [GameDev Academy](
 
 Assignment [Link](https://www.notion.so/RPG-game-f94a617841e240a293c0b6928beebe89).
 
+## Demo link
+[link](https://ultimate-ninja.netlify.app/)
 
+## How to play the game
+- Enter your name and click on the start button
+- You will be directed to the world Scene
+- Use the left, right, up and down arrows to navigate through the scene
+- You will then be directed to the battle scene and here you will fight against two enemies in each round.
+- You will use the arrows still to dodge the attacks and the space bar to launch attack
+- Enjoy
 
 ## Technologies used
 * HTML and CSS
@@ -23,7 +32,7 @@ Assignment [Link](https://www.notion.so/RPG-game-f94a617841e240a293c0b6928beebe8
 * Webpack
 * Eslint
 * Babel
-* Jest in the tests
+* Jest for testing the game
 * Github
 * [Netlify](https://app.netlify.com/) for the deployment
 * [Leaderboard API service](https://www.notion.so/Leaderboard-API-service-24c0c3c116974ac49488d4eb0267ade3) for the leaderboard
@@ -71,7 +80,7 @@ Overall Grade ![mast][mast]
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/ampaire/phaserRPG/issues).
+You can open a new issue on the [issues page](https://github.com/ampaire/phaserRPG/issues).
 
 ## Show your support
 
@@ -79,7 +88,7 @@ Give a ⭐️ if you like this project!
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/badge/Contributors-2-%2300ff00
+[contributors-shield]: https://img.shields.io/badge/Contributors-1-%2300ff00
 [contributors-url]: https://github.com/ampaire/phaserRPG/graphs/contributors
 [issues-shield]: https://img.shields.io/badge/issues-0-%2300ff00
 [issues-url]: https://github.com/ampaire/phaserRPG/issues/
