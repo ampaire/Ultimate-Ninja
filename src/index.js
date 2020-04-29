@@ -7,6 +7,7 @@ import Model from './helpers/model';
 import TitleScene from './scenes/titleScene';
 import GameOver from './scenes/gameOver';
 import OptionsScene from './scenes/optionsScene';
+import InstructionsScene from './scenes/instructions';
 import CreditsScene from './scenes/creditsScene';
 import WorldScene from './scenes/worldScene';
 import { BattleScene, UIScene } from './scenes/battle';
@@ -21,6 +22,7 @@ class Game extends Phaser.Game {
     const model = new Model();
     this.globals = { model, bgMusic: null };
     this.scene.add('Boot', BootScene);
+    this.scene.add('InstructionsScene', InstructionsScene);
     this.scene.add('Preloader', PreloaderScene);
     this.scene.add('Title', TitleScene);
     this.scene.add('GameOver', GameOver);

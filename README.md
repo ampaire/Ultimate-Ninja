@@ -37,8 +37,10 @@ Assignment [Link](https://www.notion.so/RPG-game-f94a617841e240a293c0b6928beebe8
 * [Netlify](https://app.netlify.com/) for the deployment
 * [Leaderboard API service](https://www.notion.so/Leaderboard-API-service-24c0c3c116974ac49488d4eb0267ade3) for the leaderboard
 
+## Skills
 
-### Transversal
+
+### Tools
 
 * Use linters (code standards) ![mast][mast]
 * Maintain professional Github repos ![mast][mast]
@@ -55,7 +57,7 @@ Assignment [Link](https://www.notion.so/RPG-game-f94a617841e240a293c0b6928beebe8
 * Ability to multitask and effectively manage time and prioritization ![mast][mast]
 
 
-### Technical
+### Technical skills
 
 * Create effective JavaScript code that solves the problem ![mast][mast]
 * Encapsulate JS code in modules ![mast][mast]
@@ -73,7 +75,7 @@ Overall Grade ![mast][mast]
 
 👤 ** Phemia Ampaire**
 
-- Github: [@ampaire]https://github.com/ampaire)
+- Github: [@ampaire](https://github.com/ampaire)
 - Twitter: [@AmpaPhem](https://twitter.com/ampaire)
 
 ## 🤝 Contributing

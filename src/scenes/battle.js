@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable import/no-mutable-exports */
 /* eslint-disable no-use-before-define */
 /* eslint-disable prefer-destructuring */
 /* eslint-disable import/no-unresolved */
@@ -9,11 +11,11 @@ import {
   scoreUpdate, powerAssign, enemySelect,
 } from '../helpers/helper';
 
-// eslint-disable-next-line import/no-mutable-exports
+
 let score = 0;
 let life = 350;
 
-// eslint-disable-next-line no-unused-vars
+
 let bar;
 
 const Unit = new Phaser.Class({
