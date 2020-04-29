@@ -82,7 +82,7 @@ export default class PreloaderScene extends Phaser.Scene {
 
     this.load.image('tree2', 'assets/tree1.png');
     this.load.image('tree1', 'assets/tree0.png');
-    this.load.image('axe', 'assets/board/Axes.png');
+    this.load.image('axe', 'assets/Axes.png');
     this.load.image('fight', 'assets/fight.jpg');
     this.load.image('space', 'assets/backspace.png');
     this.load.image('arrow', 'assets/pointers.jpg');
@@ -94,17 +94,17 @@ export default class PreloaderScene extends Phaser.Scene {
       frameHeight: 16,
     });
 
-    this.load.spritesheet('player2', 'assets/board/Fighter.png', {
+    this.load.spritesheet('player2', 'assets/Fighter.png', {
       frameWidth: 105,
       frameHeight: 100,
     });
 
-    this.load.image('hero1', 'assets/map/ninja.jpg');
-    this.load.image('hero2', 'assets/map/alienHero2.jpg');
-    this.load.image('wizarus', 'assets/map/wizard1.png');
-    this.load.image('wizarus2', 'assets/map/wizard2.png');
-    this.load.image('wizarus3', 'assets/map/wizard3.png');
-    this.load.image('ghostus', 'assets/map/kiranga.png');
+    this.load.image('hero1', 'assets/ninja.jpg');
+    this.load.image('hero2', 'assets/alienHero2.jpg');
+    this.load.image('wizarus', 'assets/wizard1.png');
+    this.load.image('wizarus2', 'assets/wizard2.png');
+    this.load.image('wizarus3', 'assets/wizard3.png');
+    this.load.image('ghostus', 'assets/kiranga.png');
     this.load.image('master', 'assets/mater.png');
   }
 
