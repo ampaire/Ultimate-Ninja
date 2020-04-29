@@ -1,5 +1,7 @@
 # JavaScript Capstone Project: Build an RPG game
 
+![screenshot](build/assets/screenshots/first.png)
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Issues][issues-shield]][issues-url]
 <br />
@@ -16,8 +18,14 @@ Assignment [Link](https://www.notion.so/RPG-game-f94a617841e240a293c0b6928beebe8
 
 ## How to play the game
 - Enter your name and click on the start button
-- You will be directed to the world Scene
-- Use the left, right, up and down arrows to navigate through the scene
+![screenshot](build/assets/screenshots/first.png)
+- You will be directed to the game menu
+![screenshot](build/assets/screenshots/2.png)
+- If you select play, you will be directed to the worldScene
+![screenshot](build/assets/screenshots/world.png)
+- Use the left, right, up and down arrows ![screenshot](build/assets/pointers.png) to navigate through the scene
+
+![screenshot](build/assets/screenshots/battle.png)
 - You will then be directed to the battle scene and here you will fight against two enemies in each round.
 - You will use the arrows still to dodge the attacks and the space bar to launch attack
 - Enjoy
