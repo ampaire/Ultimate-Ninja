@@ -18,20 +18,20 @@ export default class InstructionsScene extends Phaser.Scene {
       { fontSize: '26px', fill: '#B09B1C' },
     );
     this.add.text(
+      300,
       100,
-      530,
       'confirm and attack ',
       { fontSize: '26px', fill: '#B09B1C' },
     );
     this.add.text(
-      450,
-      480,
+      300,
+      180,
       'Enemies are not visible ',
       { fontSize: '20px', fill: '#B09B1C' },
     );
     this.add.text(
-      450,
-      530,
+      300,
+      260,
       'Use brute force to see them',
       { fontSize: '20px', fill: '#B09B1C' },
     );
@@ -52,7 +52,7 @@ export default class InstructionsScene extends Phaser.Scene {
     To dodge the enemies' attack,
     Use the left and right Keys.
     If you pass one level,
-    More enemies are added to the field,
+    Another set of enemies is added,
     Fight them all to become the Ultimate ninja.
     `);
     this.menuButton = new Button(this, 400, 500, 'blueButton1', 'blueButton2', 'Menu', 'Title');
