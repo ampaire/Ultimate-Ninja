@@ -7,9 +7,6 @@
 This is Microverse's final project for the Javascript section.
 
 In this project I implemented an RPG game using [Phaser 3](http://phaser.io/tutorials), an open-source framework for Canvas and WebGL powered browser games.
-
-## About
-
 This project's objective was to build a platform game similar [GameDev Academy](https://gamedevacademy.org/how-to-create-a-turn-based-rpg-game-in-phaser-3-part-1/).The main objective was to use the tutorial create my own role play game.
 
 Assignment [Link](https://www.notion.so/RPG-game-f94a617841e240a293c0b6928beebe89).
@@ -94,7 +91,7 @@ Give a ⭐️ if you like this project!
 [contributors-url]: https://github.com/ampaire/phaserRPG/graphs/contributors
 [issues-shield]: https://img.shields.io/badge/issues-0-%2300ff00
 [issues-url]: https://github.com/ampaire/phaserRPG/issues/
-[mast]: https://raw.githubusercontent.com/ampaire/phaserRPG/master/build/assets/grade/masteryBadge.png
+[mast]: https://raw.githubusercontent.com/ampaire/phaserRPG/feature/build/assets/grade/masteryBadge.png
 
 # Acknowledgements
 [Game Dev Academy](https://gamedevacademy.org/how-to-create-a-turn-based-rpg-game-in-phaser-3-part-1/)
