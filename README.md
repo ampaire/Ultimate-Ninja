@@ -1,5 +1,8 @@
 # JavaScript Capstone Project: Build an RPG game
 
+<h1 align="center">Ultimate Ninja</h1>
+<br>
+
 ![screenshot](build/assets/screenshots/first.png)
 
 [![Contributors][contributors-shield]][contributors-url]
@@ -29,6 +32,15 @@ Assignment [Link](https://www.notion.so/RPG-game-f94a617841e240a293c0b6928beebe8
 - You will then be directed to the battle scene and here you will fight against two enemies in each round.
 - You will use the arrows still to dodge the attacks and the space bar to launch attack
 - Enjoy
+
+
+## Design
+
+This is how i designed my game: 
+- In the first two days, I had a lot of ideas for a game in my mind. I thought of creating this cool 3D game with characters fighting but I ended up creating a game where there are two game characters on one side fighting enemies on the other side. 
+- I however, lost sometime in between and when I was able to catchup, I continued with the desifn process. 
+- I decided to name my game Ultimate Ninja because the name sounded cool for a turn based game especially with characters fighting.
+- I used the available sprites, images and sounds from [openGame Art](https://opengameart.org)
 
 ## Technologies used
 * HTML and CSS
@@ -100,7 +112,8 @@ Overall Grade ![mast][mast]
 👤 ** Phemia Ampaire**
 
 - Github: [@ampaire](https://github.com/ampaire)
-- Twitter: [@AmpaPhem](https://twitter.com/ampaire)
+- Twitter: [@AmpaPhem](https://twitter.com/AmpaPhem)
+- Linkedin: [linkedin](https://linkedin.com/ampaire-phemia)
 
 ## 🤝 Contributing
 
@@ -122,3 +135,4 @@ Give a ⭐️ if you like this project!
 
 # Acknowledgements
 [Game Dev Academy](https://gamedevacademy.org/how-to-create-a-turn-based-rpg-game-in-phaser-3-part-1/)
+[openGame Art](https://opengameart.org)
