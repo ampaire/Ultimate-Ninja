@@ -4,7 +4,7 @@
 [![Issues][issues-shield]][issues-url]
 <br />
 
-This is Microverse's final project for the Javascript section.
+This is [Microverse's](https://www.microverse.org/) final project for the Javascript section.
 
 In this project I implemented an RPG game using [Phaser 3](http://phaser.io/tutorials), an open-source framework for Canvas and WebGL powered browser games.
 This project's objective was to build a platform game similar [GameDev Academy](https://gamedevacademy.org/how-to-create-a-turn-based-rpg-game-in-phaser-3-part-1/).The main objective was to use the tutorial create my own role play game.
@@ -33,6 +33,25 @@ Assignment [Link](https://www.notion.so/RPG-game-f94a617841e240a293c0b6928beebe8
 * Github
 * [Netlify](https://app.netlify.com/) for the deployment
 * [Leaderboard API service](https://www.notion.so/Leaderboard-API-service-24c0c3c116974ac49488d4eb0267ade3) for the leaderboard
+
+## Project Setup
+- To use this project, clone this repositoy by running
+~~~ 
+$git clone https://github.com/ampaire/phaserRPG.git 
+~~~
+- To install technologies used for this project, run
+~~~
+$npm install
+~~~
+- Then run
+~~~
+$npm run build
+~~~
+- Finally run
+~~~
+$npm run start
+~~~
+And you will be directed to the port where your project is cureently runing
 
 ## Skills
 
