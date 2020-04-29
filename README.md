@@ -95,3 +95,6 @@ Give a ⭐️ if you like this project!
 [issues-shield]: https://img.shields.io/badge/issues-0-%2300ff00
 [issues-url]: https://github.com/ampaire/phaserRPG/issues/
 [mast]: https://raw.githubusercontent.com/ampaire/phaserRPG/master/build/assets/grade/masteryBadge.png
+
+# Acknowledgements
+[Game Dev Academy](https://gamedevacademy.org/how-to-create-a-turn-based-rpg-game-in-phaser-3-part-1/)
