@@ -16,7 +16,7 @@ This project's objective was to build a platform game similar [GameDev Academy](
 
 Assignment [Link](https://www.notion.so/RPG-game-f94a617841e240a293c0b6928beebe89).
 
-## Demo link
+## ✨ Demo link
 [link](https://ultimate-ninja.netlify.app/)
 
 ## How to play the game
@@ -34,11 +34,11 @@ Assignment [Link](https://www.notion.so/RPG-game-f94a617841e240a293c0b6928beebe8
 - Enjoy
 
 
-## Design
+## Design and thinking
 
 This is how i designed my game: 
 - In the first two days, I had a lot of ideas for a game in my mind. I thought of creating this cool 3D game with characters fighting but I ended up creating a game where there are two game characters on one side fighting enemies on the other side. 
-- I however, lost sometime in between and when I was able to catchup, I continued with the desifn process. 
+- I however, lost sometime in between and when I was able to catchup, I continued with the design process. 
 - I decided to name my game Ultimate Ninja because the name sounded cool for a turn based game especially with characters fighting.
 - I used the available sprites, images and sounds from [openGame Art](https://opengameart.org)
 
@@ -134,5 +134,7 @@ Give a ⭐️ if you like this project!
 [mast]: https://raw.githubusercontent.com/ampaire/phaserRPG/feature/build/assets/grade/masteryBadge.png
 
 # Acknowledgements
-[Game Dev Academy](https://gamedevacademy.org/how-to-create-a-turn-based-rpg-game-in-phaser-3-part-1/)
-[openGame Art](https://opengameart.org)
+- [Game Dev Academy](https://gamedevacademy.org/how-to-create-a-turn-based-rpg-game-in-phaser-3-part-1/)
+- [openGame Art](https://opengameart.org)
+- [Leaderboard API service](https://www.notion.so/Leaderboard-API-service-24c0c3c116974ac49488d4eb0267ade3)
+- My mentor at Microverse - [Thais Viera](https://github.com/thsvr)
