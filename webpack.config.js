@@ -3,15 +3,13 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-
+  mode: 'development',
   entry: './src/index.js',
-
   output: {
     path: path.resolve(__dirname, 'build'),
+    filename: 'project.bundle.js',
     publicPath: '/build/',
-    filename: 'app.js',
   },
-
   module: {
     rules: [
       {
@@ -27,5 +25,4 @@ module.exports = {
       WEBGL_RENDERER: JSON.stringify(true),
     }),
   ],
-
 };

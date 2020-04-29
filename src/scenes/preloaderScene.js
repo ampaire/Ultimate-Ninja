@@ -78,18 +78,18 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('blueButton2', 'assets/decor/button2.png');
     this.load.image('box', 'assets/ui/sound6.png');
     this.load.image('checkedBox', 'assets/ui/sound3.png');
-    this.load.audio('bgMusic', ['assets/sounds/StartTheme.mp3']);
+    this.load.audio('bgMusic', ['assets/sounds/battleThemeA.mp3']);
 
-    this.load.image('tree2', 'assets/map/tree1.png');
-    this.load.image('tree1', 'assets/map/tree0.png');
+    this.load.image('tree2', 'assets/tree1.png');
+    this.load.image('tree1', 'assets/tree0.png');
     this.load.image('axe', 'assets/board/Axes.png');
     this.load.image('fight', 'assets/fight.jpg');
     this.load.image('space', 'assets/backspace.png');
     this.load.image('arrow', 'assets/pointers.jpg');
 
-    this.load.image('court', 'assets/map/court.png');
+    this.load.image('court', 'assets/court.png');
 
-    this.load.spritesheet('player', 'assets/map/RPG_assets.png', {
+    this.load.spritesheet('player', 'assets/RPG_assets.png', {
       frameWidth: 16,
       frameHeight: 16,
     });
