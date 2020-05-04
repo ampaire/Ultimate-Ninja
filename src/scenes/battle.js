@@ -172,7 +172,7 @@ const BattleScene = new Phaser.Class({
       150,
       'bandit',
       null,
-      'drangon',
+      'dragon',
       200,
     );
     this.add.existing(simpay);

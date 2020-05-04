@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 /* eslint-disable no-param-reassign */
 /* eslint-disable import/no-unresolved */
 
@@ -23,7 +24,7 @@ class WorldScene extends Phaser.Scene {
       const id = Phaser.Math.RND.between(1, 2);
       trees.create(x, y, `tree${id}`);
     }
-    scoreText = this.add.text(5, 16, `Score : ${score}`, {
+    scoreText = this.add.text(5, 16, `score: ${this.score}`, {
       fontSize: '32px',
       fill: '#fff',
     });
@@ -84,23 +85,13 @@ class WorldScene extends Phaser.Scene {
     this.cursors = this.input.keyboard.createCursorKeys();
 
 
-    this.spawns = this.physics.add.group({
-      classType: Phaser.GameObjects.Zone,
-    });
-    for (let i = 0; i < 20; i += 1) {
-      const x = Phaser.Math.RND.between(0, this.physics.world.bounds.width);
-      const y = Phaser.Math.RND.between(0, this.physics.world.bounds.height);
-
+    this.spawns = this.physics.add.group({ classType: Phaser.GameObjects.Zone });
+    for (let i = 0; i < 30; i++) {
+      const x = Phaser.Math.RND.between(60, this.physics.world.bounds.width);
+      const y = Phaser.Math.RND.between(60, this.physics.world.bounds.height);
       this.spawns.create(x, y, 20, 20);
     }
-
-    this.physics.add.overlap(
-      this.player,
-      this.spawns,
-      this.onMeetEnemy,
-      false,
-      this,
-    );
+    this.physics.add.overlap(this.player, this.spawns, this.overlayEnemy, false, this);
 
     this.sys.events.on('wake', this.wake, this);
   }
@@ -112,7 +103,7 @@ class WorldScene extends Phaser.Scene {
     this.cursors.down.reset();
   }
 
-  onMeetEnemy(zone) {
+  overlayEnemy(zone) {
     zone.x = Phaser.Math.RND.between(0, this.physics.world.bounds.width);
     zone.y = Phaser.Math.RND.between(0, this.physics.world.bounds.height);
     scoreText.setText(`Score: ${score}`);
@@ -127,7 +118,6 @@ class WorldScene extends Phaser.Scene {
   update() {
     this.player.body.setVelocity(0);
 
-
     if (this.cursors.left.isDown) {
       this.player.body.setVelocityX(-80);
     } else if (this.cursors.right.isDown) {
@@ -140,13 +130,10 @@ class WorldScene extends Phaser.Scene {
       this.player.body.setVelocityY(80);
     }
 
-
     if (this.cursors.left.isDown) {
       this.player.anims.play('left', true);
-      this.player.flipX = true;
     } else if (this.cursors.right.isDown) {
       this.player.anims.play('right', true);
-      this.player.flipX = false;
     } else if (this.cursors.up.isDown) {
       this.player.anims.play('up', true);
     } else if (this.cursors.down.isDown) {
