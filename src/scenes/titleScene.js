@@ -11,7 +11,9 @@ export default class TitleScene extends Phaser.Scene {
   }
 
   create() {
-    this.add.image(400, 300, 'fight');
+    this.add.text(180, 60, 'THE ULTIMATE NINJA', {
+      fontSize: '50px', textAlign: 'center', fontFamily: 'Amita', fill: '#fff',
+    });
     this.add.image(400, 100, 'axe');
 
     this.gameButton = new Button(
@@ -35,7 +37,7 @@ export default class TitleScene extends Phaser.Scene {
     );
 
 
-    this.creditsButton = new Button(
+    this.instructionsButton = new Button(
       this,
       config.width / 2,
       config.height / 2 + 100,
