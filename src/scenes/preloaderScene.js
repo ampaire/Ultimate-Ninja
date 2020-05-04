@@ -78,7 +78,7 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('blueButton2', 'assets/button2.png');
     this.load.image('box', 'assets/sound6.png');
     this.load.image('checkedBox', 'assets/sound3.png');
-    this.load.audio('bgMusic', ['assets/sounds/StartTheme.mp3']);
+    this.load.audio('bgMusic', ['assets/sounds/battleTheme.mp3']);
 
     this.load.image('tree2', 'assets/tree1.png');
     this.load.image('tree1', 'assets/tree0.png');
@@ -105,7 +105,7 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('wizarus2', 'assets/wizard2.png');
     this.load.image('wizarus3', 'assets/wizard3.png');
     this.load.image('ghostus', 'assets/kiranga.png');
-    this.load.image('master', 'assets/mater.png');
+    this.load.image('master', 'assets/master.png');
   }
 
   ready() {

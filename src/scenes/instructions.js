@@ -20,14 +20,15 @@ export default class InstructionsScene extends Phaser.Scene {
     });
     instructionsText.setOrigin(0.5, 0.5);
     instructionsText.setText(` 
-    To play the game, 
-    the player has to get a key to open the 
-    door to the next level
-    of a game while avoiding obstacles 
-    like the bombs and the spiders.
-    Use the arrows of your keyboard to
-    move the player left and right and 
-    spacebar for the player to jump`);
+    Ultimate Ninja is a fighting game,
+    The fighting scene has two enemies
+    on the left and you also have two 
+    players on the right to fight against
+    the enemies. 
+    Use the space bar to attack your enemy
+    Also use the ⬆, ⬇, ⬅ or ➡ arrows on the 
+    keyboard to dodge the enemy's attack and
+    move to higher levels`);
     this.menuButton = new Button(this, 400, 500, 'blueButton1', 'blueButton2', 'Menu', 'Title');
   }
 }
