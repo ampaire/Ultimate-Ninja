@@ -15,7 +15,6 @@ class WorldScene extends Phaser.Scene {
   }
 
   create() {
-    const map = this.add.image(400, 300, 'map');
 
     const trees = this.physics.add.staticGroup();
     for (let i = 0; i < 15; i += 1) {
@@ -77,8 +76,6 @@ class WorldScene extends Phaser.Scene {
 
     this.player.setCollideWorldBounds(true);
 
-
-    this.cameras.main.setBounds(0, 0, map.widthInPixels, map.heightInPixels);
     this.cameras.main.roundPixels = true;
 
 

@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 /* eslint-disable no-unused-vars */
 /* eslint-disable import/no-mutable-exports */
 /* eslint-disable no-use-before-define */
@@ -128,6 +129,10 @@ const Message = new Phaser.Class({
   },
 });
 
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
 const BattleScene = new Phaser.Class({
   Extends: Phaser.Scene,
   initialize: function FightScene() {
@@ -144,7 +149,7 @@ const BattleScene = new Phaser.Class({
   startBattle() {
     const warrior = new PlayerCharacter(
       this,
-      500,
+      550,
       150,
       'hero1',
       null,
@@ -156,7 +161,7 @@ const BattleScene = new Phaser.Class({
 
     const mage = new PlayerCharacter(
       this,
-      500,
+      550,
       300,
       'hero2',
       null,
@@ -166,34 +171,26 @@ const BattleScene = new Phaser.Class({
     );
     this.add.existing(mage);
 
-    const simpay = new Enemy(
-      this,
-      250,
-      150,
-      'bandit',
-      null,
-      'dragon',
-      200,
-    );
-    this.add.existing(simpay);
-
-    const hokage = new Enemy(
-      this,
-      250,
-      300,
-      'bandit',
-      null,
-      'bandit',
-      200,
-    );
-    this.add.existing(hokage);
-
-
     this.heroes = [warrior, mage];
 
-    this.enemies = [simpay, hokage];
+    const Wizarus = new Enemy(this, 200, 150, 'wizarus', null, 'Wizard1', 200);
+    const Wizarus2 = new Enemy(this, 200, 150, 'wizarus2', null, 'Wizard2', 200);
+    const Wizarus3 = new Enemy(this, 200, 300, 'wizarus3', null, 'Wizard3', 200);
+    const ghostus = new Enemy(this, 200, 300, 'ghostus', null, 'Ghost', 200);
+
+    const grimoire1 = [Wizarus, Wizarus2];
+    const grimoire2 = [Wizarus3, ghostus];
+
+    const enemy1 = grimoire1[getRndInteger(0, grimoire1.length)];
+    const enemy2 = grimoire2[getRndInteger(0, grimoire2.length)];
+
+    this.add.existing(enemy1);
+    this.add.existing(enemy2);
+
+    this.enemies = [enemy1, enemy2];
 
     this.units = this.heroes.concat(this.enemies);
+
 
     this.index = -1;
 
@@ -296,7 +293,7 @@ const MenuItem = new Phaser.Class({
     Phaser.GameObjects.Text.call(this, scene, x, y, text, {
       color: '#ffffff',
       align: 'left',
-      fontSize: 20,
+      fontSize: 25,
     });
   },
 
@@ -439,20 +436,20 @@ const UIScene = new Phaser.Class({
     }, 500);
     this.graphics = this.add.graphics();
     this.graphics.lineStyle(1, 0xffffff);
-    this.graphics.fillStyle(0x031f4c, 1);
-    this.graphics.strokeRect(200, 400, 100, 100);
-    this.graphics.fillRect(200, 400, 100, 100);
-    this.graphics.strokeRect(350, 400, 90, 50);
-    this.graphics.fillRect(350, 400, 90, 50);
-    this.graphics.strokeRect(500, 400, 100, 100);
-    this.graphics.fillRect(500, 400, 100, 100);
+    this.graphics.fillStyle(0x8B0000, 1);
+    this.graphics.strokeRect(10, 420, 290, 150);
+    this.graphics.fillRect(10, 420, 290, 150);
+    this.graphics.strokeRect(310, 420, 190, 150);
+    this.graphics.fillRect(310, 420, 190, 150);
+    this.graphics.strokeRect(510, 420, 280, 150);
+    this.graphics.fillRect(510, 420, 280, 150);
 
 
     this.menus = this.add.container();
 
-    this.heroesMenu = new HeroesMenu(502, 400, this);
-    this.actionsMenu = new ActionsMenu(352, 400, this);
-    this.enemiesMenu = new EnemiesMenu(202, 400, this);
+    this.heroesMenu = new HeroesMenu(530, 440, this);
+    this.actionsMenu = new ActionsMenu(320, 440, this);
+    this.enemiesMenu = new EnemiesMenu(50, 440, this);
 
 
     this.currentMenu = this.actionsMenu;
