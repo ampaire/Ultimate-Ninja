@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-plusplus */
 /* eslint-disable no-param-reassign */
 /* eslint-disable import/no-unresolved */
@@ -15,20 +16,19 @@ class WorldScene extends Phaser.Scene {
   }
 
   create() {
-
     const trees = this.physics.add.staticGroup();
-    for (let i = 0; i < 15; i += 1) {
+    for (let i = 0; i < 15; i++) {
       const x = Phaser.Math.RND.between(80, 800);
       const y = Phaser.Math.RND.between(10, 600);
       const id = Phaser.Math.RND.between(1, 2);
       trees.create(x, y, `tree${id}`);
     }
-    scoreText = this.add.text(5, 16, `score: ${this.score}`, {
+    scoreText = this.add.text(200, 100, `Score : ${score}`, {
       fontSize: '32px',
       fill: '#fff',
     });
 
-    levelText = this.add.text(5, 50, 'Level :1', {
+    levelText = this.add.text(200, 150, 'Level :1', {
       fontSize: '32px',
       fill: '#fff',
     });
@@ -73,22 +73,22 @@ class WorldScene extends Phaser.Scene {
 
     this.player = this.physics.add.sprite(50, 100, 'player', 6).setScale(2);
     this.physics.add.collider(this.player, trees);
-
     this.player.setCollideWorldBounds(true);
-
     this.cameras.main.roundPixels = true;
-
-
     this.cursors = this.input.keyboard.createCursorKeys();
 
 
-    this.spawns = this.physics.add.group({ classType: Phaser.GameObjects.Zone });
-    for (let i = 0; i < 30; i++) {
-      const x = Phaser.Math.RND.between(60, this.physics.world.bounds.width);
-      const y = Phaser.Math.RND.between(60, this.physics.world.bounds.height);
+    this.spawns = this.physics.add.group({
+      classType: Phaser.GameObjects.Zone,
+    });
+    for (let i = 0; i < 20; i++) {
+      const x = Phaser.Math.RND.between(0, this.physics.world.bounds.width);
+      const y = Phaser.Math.RND.between(0, this.physics.world.bounds.height);
+
       this.spawns.create(x, y, 20, 20);
     }
-    this.physics.add.overlap(this.player, this.spawns, this.overlayEnemy, false, this);
+
+    this.physics.add.overlap(this.player, this.spawns, this.onMeetEnemy, false, this);
 
     this.sys.events.on('wake', this.wake, this);
   }
@@ -100,7 +100,7 @@ class WorldScene extends Phaser.Scene {
     this.cursors.down.reset();
   }
 
-  overlayEnemy(zone) {
+  onMeetEnemy(zone) {
     zone.x = Phaser.Math.RND.between(0, this.physics.world.bounds.width);
     zone.y = Phaser.Math.RND.between(0, this.physics.world.bounds.height);
     scoreText.setText(`Score: ${score}`);
@@ -112,8 +112,9 @@ class WorldScene extends Phaser.Scene {
     this.scene.switch('BattleScene');
   }
 
-  update() {
+  update(time, delta) {
     this.player.body.setVelocity(0);
+
 
     if (this.cursors.left.isDown) {
       this.player.body.setVelocityX(-80);
@@ -127,10 +128,13 @@ class WorldScene extends Phaser.Scene {
       this.player.body.setVelocityY(80);
     }
 
+
     if (this.cursors.left.isDown) {
       this.player.anims.play('left', true);
+      this.player.flipX = true;
     } else if (this.cursors.right.isDown) {
       this.player.anims.play('right', true);
+      this.player.flipX = false;
     } else if (this.cursors.up.isDown) {
       this.player.anims.play('up', true);
     } else if (this.cursors.down.isDown) {
@@ -140,5 +144,6 @@ class WorldScene extends Phaser.Scene {
     }
   }
 }
+
 
 export default WorldScene;

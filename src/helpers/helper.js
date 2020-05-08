@@ -9,6 +9,10 @@ const scoreTextUpdate = (el) => {
   }, 500);
 };
 
+const hpUpdate = (el) => {
+  setInterval(() => el, 500);
+};
+
 const levelUpdate = (el) => {
   setInterval(() => {
     let level;
@@ -52,16 +56,16 @@ const powerAssign = (el) => {
     case 'wizarus2':
       return [90, 90];
     case 'wizarus3':
-      return [120, 120];
+      return [100, 110];
     case 'ghostus':
-      return [180, 180];
+      return [180, 150];
     case 'master':
-      return [200, 200];
+      return [200, 150];
     default:
       return 50;
   }
 };
 
 export {
-  enemySelect, scoreTextUpdate, levelUpdate, scoreUpdate, powerAssign,
+  enemySelect, scoreTextUpdate, levelUpdate, scoreUpdate, powerAssign, hpUpdate,
 };

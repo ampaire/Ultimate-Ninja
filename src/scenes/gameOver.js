@@ -18,7 +18,7 @@ export default class GameOver extends Phaser.Scene {
     this.madeByText = this.add.text(
       0,
       0,
-      'African Jungle',
+      'Ultimate Ninja',
       { fontSize: '26px', fill: '#B09B1C' },
     );
     this.scoreT = this.add.text(

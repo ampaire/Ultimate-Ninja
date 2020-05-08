@@ -13,9 +13,6 @@ import WorldScene from './scenes/worldScene';
 import { BattleScene, UIScene } from './scenes/battle';
 import liveUpdate from './dom';
 
-require('babel-core/register');
-require('babel-polyfill');
-
 class Game extends Phaser.Game {
   constructor() {
     super(config);
