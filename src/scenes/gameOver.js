@@ -13,7 +13,7 @@ export default class GameOver extends Phaser.Scene {
   }
 
   create() {
-    this.menuButton = new Button(this, 400, 400, 'blueButton1', 'blueButton2', 'Main Menu');
+    this.menuButton = new Button(this, 400, 400, 'blueButton1', 'blueButton2', 'Menu', 'Title');
     this.add.image(400, 270, 'axe');
     this.madeByText = this.add.text(
       0,
@@ -24,7 +24,7 @@ export default class GameOver extends Phaser.Scene {
     this.scoreT = this.add.text(
       0,
       0,
-      `Score : ${score}`,
+      `Score : ${score.score}`,
       { fontSize: '26px', fill: '#fff' },
     );
     this.highScoreT = this.add.text(

@@ -23,7 +23,7 @@ class WorldScene extends Phaser.Scene {
       const id = Phaser.Math.RND.between(1, 2);
       trees.create(x, y, `tree${id}`);
     }
-    scoreText = this.add.text(200, 100, `Score : ${score}`, {
+    scoreText = this.add.text(200, 100, `Score: ${score.score}`, {
       fontSize: '32px',
       fill: '#fff',
     });
@@ -103,7 +103,7 @@ class WorldScene extends Phaser.Scene {
   onMeetEnemy(zone) {
     zone.x = Phaser.Math.RND.between(0, this.physics.world.bounds.width);
     zone.y = Phaser.Math.RND.between(0, this.physics.world.bounds.height);
-    scoreText.setText(`Score: ${score}`);
+    scoreText.setText(`Score: ${score.score}`);
 
     this.cameras.main.shake(300);
 

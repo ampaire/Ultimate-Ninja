@@ -5,7 +5,7 @@ const score = require('../scenes/battle');
 
 const scoreTextUpdate = (el) => {
   setInterval(() => {
-    el.setText(`Score: ${score}`);
+    el.setText(`Score: ${score.score}`);
   }, 500);
 };
 

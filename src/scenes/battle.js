@@ -26,7 +26,6 @@ const BattleScene = new Phaser.Class({
     Phaser.Scene.call(this, { key: 'BattleScene' });
   },
   create() {
-    // bar.value = 20;
     this.add.image(400, 300, 'fight');
     this.startBattle();
     this.sys.events.on('wake', this.startBattle, this);

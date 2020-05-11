@@ -48,12 +48,10 @@ window.addEventListener('keypress', (ev) => {
 });
 
 const liveUpdate = () => {
-  setInterval(() => {
-    if (score > getCurrentScore()) {
-      currentScore(score);
-      submitScore(getCurrentPlayer(), getCurrentScore()).then(render());
-    }
-  }, 1000);
+  if (score > getCurrentScore()) {
+    currentScore(score);
+    submitScore(getCurrentPlayer(), getCurrentScore()).then(render());
+  }
 };
 
 export default liveUpdate;
