@@ -16,7 +16,7 @@ This project's objective was to build a platform game similar [GameDev Academy](
 
 Assignment [Link](https://www.notion.so/RPG-game-f94a617841e240a293c0b6928beebe89).
 
-## ✨ Demo link
+## ✨ Live link
 [link](https://ultimate-ninja.netlify.app/)
 
 ## How to play the game
@@ -24,9 +24,9 @@ Assignment [Link](https://www.notion.so/RPG-game-f94a617841e240a293c0b6928beebe8
 ![screenshot](build/assets/screenshots/first.png)
 - You will be directed to the game menu
 ![screenshot](build/assets/screenshots/2.png)
-- If you select play, you will be directed to the worldScene
+- If you select play, you will be directed to the worldScene.
 ![screenshot](build/assets/screenshots/world.png)
-- Use the left, right, up and down arrows ![screenshot](build/assets/pointers.png) to navigate through the scene
+- Use the left, right, up and down arrows ![screenshot](build/assets/pointers.png) to navigate through the scene and look for the enemies. Once you find them, you shall be directed to the battle scene to fight with the found enemies.
 
 ![screenshot](build/assets/screenshots/battle.png)
 - You will then be directed to the battle scene and here you will fight against two enemies in each round.
@@ -35,12 +35,77 @@ Assignment [Link](https://www.notion.so/RPG-game-f94a617841e240a293c0b6928beebe8
 
 
 ## Design and thinking
+This is a turn based role play game. The objective of this game is to give players a chance to enjoy a fun but also leveling game to give them a feel of progression and at the same time challenge as they fight the different characters dubbed as enemies.
 
-This is how i designed my game: 
+This is how I designed my game: 
 - In the first two days, I had a lot of ideas for a game in my mind. I thought of creating this cool 3D game with characters fighting but I ended up creating a game where there are two game characters on one side fighting enemies on the other side. 
 - I however, lost sometime in between and when I was able to catchup, I continued with the design process. 
 - I decided to name my game Ultimate Ninja because the name sounded cool for a turn based game especially with characters fighting.
 - I used the available sprites, images and sounds from [openGame Art](https://opengameart.org)
+
+The game comprises of two scenes. That is the World Scene which has one player. To navigate through this scene, a player has to use the arrows ![screenshot](build/assets/pointers.png) to navigate through this scene. During the design process, my thinking was that the enemies are hiding and the player has to navigate through to look for them.
+
+The battle Scene is where the action takes place and to dodge attack, we still use ![screenshot](build/assets/pointers.png) arrows. 
+
+The more the levels you win, the higher the score!.
+
+
+#### players-characters
+
+These are your player characters and you will interact with them very often.
+
+##### Prospector
+You will find this one in the worldScene and he is the one you will use to look for the enemies.
+
+##### Ninja ![screenshot](build/assets/ninja.jpg)
+This is your most powerful player and you ought to guard him well. He hits the enemy with a damage of **150** and **80 Hp**
+
+##### Herus ![screenshot](build/assets/alienHero2.jpg)
+This one is your weakest  and only hits with **50 damage** and **200 Hp**. But he can also handle more attack from the enemy than **Ninja**
+
+
+
+#### Enemies
+These are the characters that you are fighting against.
+
+##### wizarus form 1 ![screenshot](build/assets/wizard1.png)
+
+You will meet him in level one of this game. He has **80 damage** and **80 Hp**. He takes more than one shape so lookout!
+
+##### wizarus form 2 ![screenshot](build/assets/wizard2.png)
+You will also meet him in level one but its also possible to meet him in level two. He has **90 damage** and **90 Hp**
+
+##### wizarus form 3 ![screenshot](build/assets/wizard3.png)
+
+You will meet him in level two and he is more powerful than the first two enemies  **110 damage** and **100 Hp**
+
+##### ghostus ![screenshot](build/assets/kiranga.png)
+
+You will find him in level 3 of this game. He is very powerful with  **120 damage** and **150 Hp**
+
+##### Master ![screenshot](build/assets/master.png)
+
+This is the strongest and most powerful of all the enemies so you will definately want to defeat him! He has **150 damage** and **200 Hp**
+
+#### Game Scenes
+
+##### TItle scene
+![screenshot](build/assets/screenshots/2.png)
+
+##### credit scene
+![screenshot](assets/credit.png)
+
+##### option scene
+![screenshot](assets/option.png)
+
+##### world scene
+![screenshot](assets/world.png)
+
+##### battle scene
+![screenshot](assets/battle.png)
+
+##### Game Over
+![screenshot](assets/over.png)
 
 ## Technologies used
 * HTML and CSS

@@ -29,7 +29,7 @@ const levelUpdate = (el) => {
 
 const enemySelect = (currentScore) => {
   let index;
-  const enemyarr = ['wizarus1', 'wizarus2', 'wizarus3', 'ghostus', 'master'];
+  const enemyarr = ['wizarus', 'wizarus2', 'wizarus3', 'ghostus', 'master'];
   if (currentScore <= 50 && currentScore >= 0) {
     index = Phaser.Math.RND.between(0, 2);
   } else if (currentScore <= 200 && currentScore >= 50) {
@@ -51,7 +51,7 @@ const scoreUpdate = (Score) => {
 
 const powerAssign = (el) => {
   switch (el) {
-    case 'wizarus1':
+    case 'wizarus':
       return [80, 80];
     case 'wizarus2':
       return [90, 90];
