@@ -87,26 +87,6 @@ You will find him in level 3 of this game. He is very powerful with  **120 damag
 
 This is the strongest and most powerful of all the enemies so you will definately want to defeat him! He has **150 damage** and **200 Hp**
 
-#### Game Scenes
-
-##### TItle scene
-![screenshot](build/assets/screenshots/2.png)
-
-##### credit scene
-![screenshot](assets/credit.png)
-
-##### option scene
-![screenshot](assets/option.png)
-
-##### world scene
-![screenshot](assets/world.png)
-
-##### battle scene
-![screenshot](assets/battle.png)
-
-##### Game Over
-![screenshot](assets/over.png)
-
 ## Technologies used
 * HTML and CSS
 * JavaScript

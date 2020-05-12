@@ -3,7 +3,6 @@ import Phaser from 'phaser';
 
 import config from '../config/config';
 import Button from '../helpers/button';
-import { getCurrentScore } from '../localStorage';
 
 const score = require('./battle');
 
@@ -24,13 +23,7 @@ export default class GameOver extends Phaser.Scene {
     this.scoreT = this.add.text(
       0,
       0,
-      `Score : ${score.score}`,
-      { fontSize: '26px', fill: '#fff' },
-    );
-    this.highScoreT = this.add.text(
-      0,
-      0,
-      `High Score ${getCurrentScore()}`,
+      `Your Score : ${score.score}`,
       { fontSize: '26px', fill: '#fff' },
     );
 

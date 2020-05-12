@@ -23,12 +23,12 @@ class WorldScene extends Phaser.Scene {
       const id = Phaser.Math.RND.between(1, 2);
       trees.create(x, y, `tree${id}`);
     }
-    scoreText = this.add.text(200, 100, `Score: ${score.score}`, {
+    scoreText = this.add.text(20, 10, `Score: ${score.score}`, {
       fontSize: '32px',
       fill: '#fff',
     });
 
-    levelText = this.add.text(200, 150, 'Level :1', {
+    levelText = this.add.text(20, 50, 'Level :1', {
       fontSize: '32px',
       fill: '#fff',
     });

@@ -56,9 +56,9 @@ const powerAssign = (el) => {
     case 'wizarus2':
       return [90, 90];
     case 'wizarus3':
-      return [100, 110];
+      return [110, 100];
     case 'ghostus':
-      return [180, 150];
+      return [120, 150];
     case 'master':
       return [200, 150];
     default:
