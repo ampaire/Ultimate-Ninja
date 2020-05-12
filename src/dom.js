@@ -7,7 +7,7 @@ const score = require('./scenes/battle');
 
 const scoreBoard = async () => {
   let list = `<h1 class="header">LeaderBoard</h1>
-  <h4><span>Number</span><span>Score</span><span>Name</span></h4>`;
+  <h4><span></span><span>Score</span><span>Name</span></h4>`;
   const leaderBoard = await getScoreBoard();
   leaderBoard.forEach((el) => {
     list += `<h4><span>${leaderBoard.indexOf(el) + 1}</span><span>${
