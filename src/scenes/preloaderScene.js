@@ -11,7 +11,7 @@ export default class PreloaderScene extends Phaser.Scene {
   }
 
   preload() {
-    this.add.image(400, 200, 'master');
+    this.add.image(400, 200, 'monster');
     const progressBar = this.add.graphics();
     const progressBox = this.add.graphics();
     progressBox.fillStyle(0x22222, 0.8);
@@ -101,6 +101,7 @@ export default class PreloaderScene extends Phaser.Scene {
 
     this.load.image('hero1', 'assets/ninja.jpg');
     this.load.image('hero2', 'assets/alienHero2.jpg');
+    this.load.image('monster', 'assets/monster.pn');
     this.load.image('wizarus', 'assets/wizard1.png');
     this.load.image('wizarus2', 'assets/wizard2.png');
     this.load.image('wizarus3', 'assets/wizard3.png');

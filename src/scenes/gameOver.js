@@ -37,13 +37,11 @@ export default class GameOver extends Phaser.Scene {
     [
       this.madeByText,
       this.scoreT,
-      this.highScoreT,
     ].forEach((el) => {
       Phaser.Display.Align.In.Center(el, this.zone);
     });
 
     this.madeByText.setY(5);
-    this.scoreT.setY(80);
-    this.highScoreT.setY(160);
+    this.scoreT.setY(160);
   }
 }

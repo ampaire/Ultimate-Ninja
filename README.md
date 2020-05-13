@@ -3,7 +3,7 @@
 <h1 align="center">Ultimate Ninja</h1>
 <br>
 
-![screenshot](build/assets/screenshots/first.png)
+![screenshot](assets/screenshots/first.png)
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Issues][issues-shield]][issues-url]
@@ -21,14 +21,14 @@ Assignment [Link](https://www.notion.so/RPG-game-f94a617841e240a293c0b6928beebe8
 
 ## How to play the game
 - Enter your name and click on the start button
-![screenshot](build/assets/screenshots/first.png)
+![screenshot](assets/screenshots/first.png)
 - You will be directed to the game menu
-![screenshot](build/assets/screenshots/2.png)
+![screenshot](assets/screenshots/2.png)
 - If you select play, you will be directed to the worldScene.
-![screenshot](build/assets/screenshots/world.png)
-- Use the left, right, up and down arrows ![screenshot](build/assets/pointers.png) to navigate through the scene and look for the enemies. Once you find them, you shall be directed to the battle scene to fight with the found enemies.
+![screenshot](assets/screenshots/world.png)
+- Use the left, right, up and down arrows ![screenshot](assets/pointers.png) to navigate through the scene and look for the enemies. Once you find them, you shall be directed to the battle scene to fight with the found enemies.
 
-![screenshot](build/assets/screenshots/battle.png)
+![screenshot](assets/screenshots/battle.png)
 - You will then be directed to the battle scene and here you will fight against two enemies in each round.
 - You will use the arrows still to dodge the attacks and the space bar to launch attack
 - Enjoy
@@ -43,9 +43,9 @@ This is how I designed my game:
 - I decided to name my game Ultimate Ninja because the name sounded cool for a turn based game especially with characters fighting.
 - I used the available sprites, images and sounds from [openGame Art](https://opengameart.org)
 
-The game comprises of two scenes. That is the World Scene which has one player. To navigate through this scene, a player has to use the arrows ![screenshot](build/assets/pointers.png) to navigate through this scene. During the design process, my thinking was that the enemies are hiding and the player has to navigate through to look for them.
+The game comprises of two scenes. That is the World Scene which has one player. To navigate through this scene, a player has to use the arrows ![screenshot](assets/pointers.png) to navigate through this scene. During the design process, my thinking was that the enemies are hiding and the player has to navigate through to look for them.
 
-The battle Scene is where the action takes place and to dodge attack, we still use ![screenshot](build/assets/pointers.png) arrows. 
+The battle Scene is where the action takes place and to dodge attack, we still use ![screenshot](assets/pointers.png) arrows. 
 
 The more the levels you win, the higher the score!.
 
@@ -57,10 +57,10 @@ These are your player characters and you will interact with them very often.
 ##### Prospector
 You will find this one in the worldScene and he is the one you will use to look for the enemies.
 
-##### Ninja ![screenshot](build/assets/ninja.jpg)
+##### Ninja ![screenshot](assets/ninja.jpg)
 This is your most powerful player and you ought to guard him well. He hits the enemy with a damage of **150** and **80 Hp**
 
-##### Herus ![screenshot](build/assets/alienHero2.jpg)
+##### Herus ![screenshot](assets/alienHero2.jpg)
 This one is your weakest  and only hits with **50 damage** and **200 Hp**. But he can also handle more attack from the enemy than **Ninja**
 
 
@@ -68,22 +68,22 @@ This one is your weakest  and only hits with **50 damage** and **200 Hp**. But h
 #### Enemies
 These are the characters that you are fighting against.
 
-##### wizarus form 1 ![screenshot](build/assets/wizard1.png)
+##### wizarus form 1 ![screenshot](assets/wizard1.png)
 
 You will meet him in level one of this game. He has **80 damage** and **80 Hp**. He takes more than one shape so lookout!
 
-##### wizarus form 2 ![screenshot](build/assets/wizard2.png)
+##### wizarus form 2 ![screenshot](assets/wizard2.png)
 You will also meet him in level one but its also possible to meet him in level two. He has **90 damage** and **90 Hp**
 
-##### wizarus form 3 ![screenshot](build/assets/wizard3.png)
+##### wizarus form 3 ![screenshot](assets/wizard3.png)
 
 You will meet him in level two and he is more powerful than the first two enemies  **110 damage** and **100 Hp**
 
-##### ghostus ![screenshot](build/assets/kiranga.png)
+##### ghostus ![screenshot](assets/kiranga.png)
 
 You will find him in level 3 of this game. He is very powerful with  **120 damage** and **150 Hp**
 
-##### Master ![screenshot](build/assets/master.png)
+##### Master ![screenshot](assets/master.png)
 
 This is the strongest and most powerful of all the enemies so you will definately want to defeat him! He has **150 damage** and **200 Hp**
 
@@ -176,7 +176,7 @@ Give a ⭐️ if you like this project!
 [contributors-url]: https://github.com/ampaire/phaserRPG/graphs/contributors
 [issues-shield]: https://img.shields.io/badge/issues-0-%2300ff00
 [issues-url]: https://github.com/ampaire/phaserRPG/issues/
-[mast]: https://raw.githubusercontent.com/ampaire/phaserRPG/feature/build/assets/grade/masteryBadge.png
+[mast]: https://raw.githubusercontent.com/ampaire/phaserRPG/feature/assets/grade/masteryBadge.png
 
 # Acknowledgements
 - [Game Dev Academy](https://gamedevacademy.org/how-to-create-a-turn-based-rpg-game-in-phaser-3-part-1/)
