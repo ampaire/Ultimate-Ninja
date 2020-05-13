@@ -494,14 +494,14 @@ let Message = new Phaser.Class({
     const graphics = this.scene.add.graphics();
     this.add(graphics);
     graphics.lineStyle(1, 0xffffff, 0.8);
-    graphics.fillStyle(0x031f4c, 0.3);
-    graphics.strokeRect(-90, -15, 180, 30);
-    graphics.fillRect(-90, -15, 180, 30);
     this.text = new Phaser.GameObjects.Text(scene, 0, 0, '', {
-      color: '#ffffff', align: 'center', fontSize: 13, wordWrap: { width: 160, useAdvancedWrap: true },
+      color: '#ffffff',
+      align: 'center',
+      fontSize: 15,
+      wordWrap: { width: 200, useAdvancedWrap: true },
     });
     this.add(this.text);
-    this.text.setOrigin(0.5);
+    this.text.setOrigin(-1);
     events.on('Message', this.showMessage, this);
     this.visible = false;
   },
