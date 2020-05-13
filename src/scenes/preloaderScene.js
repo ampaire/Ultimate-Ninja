@@ -101,7 +101,7 @@ export default class PreloaderScene extends Phaser.Scene {
 
     this.load.image('hero1', 'assets/ninja.jpg');
     this.load.image('hero2', 'assets/alienHero2.jpg');
-    this.load.image('monster', 'assets/monster.pn');
+    this.load.image('monster', 'assets/monster.png');
     this.load.image('wizarus', 'assets/wizard1.png');
     this.load.image('wizarus2', 'assets/wizard2.png');
     this.load.image('wizarus3', 'assets/wizard3.png');
