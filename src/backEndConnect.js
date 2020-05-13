@@ -26,7 +26,7 @@ const submitScore = async (name, score) => {
     score,
   };
   const post = JSON.stringify(submit);
-  const address = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/eGp9QhdbqO7bCDklVyKQ/scores/';
+  const address = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/qUQy1Y53jUkT4y6WyB4G/scores/';
   const settings = {
     method: 'POST',
     headers: {
@@ -49,7 +49,7 @@ const sorting = (obj) => {
 };
 
 const getScoreBoard = async () => {
-  const address = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/eGp9QhdbqO7bCDklVyKQ/scores/';
+  const address = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/qUQy1Y53jUkT4y6WyB4G/scores/';
   const settings = {
     method: 'GET',
     headers: {
