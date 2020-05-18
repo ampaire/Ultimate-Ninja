@@ -1,13 +1,15 @@
+/* eslint-disable import/no-cycle */
+/* eslint-disable no-alert */
 import {
   currentPlayer, getCurrentPlayer, currentScore, getCurrentScore,
 } from './localStorage';
 import { submitScore, getScoreBoard } from './backEndConnect';
 
-const score = require('./scenes/battle');
+import { score } from './scenes/battle';
 
 const scoreBoard = async () => {
   let list = `<h1 class="header">LeaderBoard</h1>
-  <h4><span>Rank</span><span>Score</span><span>Name</span></h4>`;
+  <h4><span>Rank</span><span>Name</span><span>Score</span></h4>`;
   const leaderBoard = await getScoreBoard();
   leaderBoard.forEach((el) => {
     list += `<h4><span>${leaderBoard.indexOf(el) + 1}</span><span>${
@@ -39,6 +41,7 @@ const hide = () => {
   from.style.display = 'none';
   div.style.display = 'none';
 };
+
 submit.addEventListener('click', hide);
 window.addEventListener('keypress', (ev) => {
   if (ev.keyCode === 13 && !getCurrentPlayer()) {

@@ -1,12 +1,13 @@
 /* eslint-disable import/no-unresolved */
-import express from 'express';
-import serveStatic from 'serve-static';
-import { join } from 'path';
+const serveStatic = require('serve-static');
+const path = require('path');
+
+const express = require('express');
 
 const app = express();
-app.use('/', serveStatic(join(__dirname, '')));
+app.use('/', serveStatic(path.join(__dirname, '')));
 app.get(/.*/, (req, res) => {
-  res.sendFile(join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 const port = process.env.PORT || 8080;
 app.listen(port);

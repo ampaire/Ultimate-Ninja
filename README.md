@@ -17,7 +17,7 @@ This project's objective was to build a platform game similar [GameDev Academy](
 Assignment [Link](https://www.notion.so/RPG-game-f94a617841e240a293c0b6928beebe89).
 
 ## ✨ Live link
-[link](https://ultimate-ninja.netlify.app/)
+[link](https://affectionate-joliot-463312.netlify.app/)
 
 ## How to play the game
 - Enter your name and click on the start button
