@@ -13,14 +13,22 @@ export default class CreditsScene extends Phaser.Scene {
     this.menuButton = new Button(this, 400, 500, 'blueButton1', 'blueButton2', 'Menu', 'Title');
     this.creditsText = this.add.text(0, 0, 'Credits', {
       fontSize: '32px',
-      fill: '#fff',
+      fill: '#FFDF00',
     });
     this.madeByText = this.add.text(
       0,
       0,
-      'Ultimate Ninja is a game created by: Phemia Ampaire',
-      { fontSize: '26px', fill: '#B09B1C' },
+      'Ultimate Ninja was created by',
+      { fontSize: '26px', fill: '#FFDF00' },
     );
+
+    this.explain = this.add.text(
+      0,
+      0,
+      'Phemia Ampaire',
+      { fontSize: '27px', fill: '#FFDF00' },
+    );
+
     this.explain1 = this.add.text(
       0,
       0,
@@ -59,6 +67,7 @@ export default class CreditsScene extends Phaser.Scene {
       this.madeByText,
       this.inspiration,
       this.assets,
+      this.explain,
       this.explain1,
       this.explain2,
       this.explain3,
@@ -67,10 +76,12 @@ export default class CreditsScene extends Phaser.Scene {
     });
 
     this.madeByText.setY(5);
-    this.explain1.setY(50);
-    this.explain2.setY(80);
-    this.explain3.setY(110);
-    this.creditsText.setY(150);
-    this.inspiration.setY(200);
+    this.explain.setY(50);
+    this.explain1.setY(100);
+    this.explain2.setY(140);
+    this.explain3.setY(180);
+    this.creditsText.setY(250);
+    this.inspiration.setY(290);
+    this.assets.setY(320);
   }
 }
