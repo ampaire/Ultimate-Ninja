@@ -1,3 +1,4 @@
+/* eslint-disable import/no-cycle */
 /* eslint-disable no-multi-assign */
 /* eslint-disable consistent-return */
 /* eslint-disable no-plusplus */
