@@ -1,13 +1,9 @@
-/* eslint-disable import/no-cycle */
-/* eslint-disable no-multi-assign */
-/* eslint-disable consistent-return */
+/* eslint-disable prefer-destructuring */
 /* eslint-disable no-plusplus */
-/* eslint-disable eqeqeq */
+/* eslint-disable no-use-before-define */
 /* eslint-disable no-unused-vars */
 /* eslint-disable import/no-mutable-exports */
-/* eslint-disable no-use-before-define */
-/* eslint-disable prefer-destructuring */
-/* eslint-disable import/no-unresolved */
+/* eslint-disable import/no-cycle */
 
 import Phaser from 'phaser';
 import HealthBar from '../helpers/healthBar';
@@ -126,6 +122,7 @@ const BattleScene = new Phaser.Class({
     }
   },
 
+  // eslint-disable-next-line consistent-return
   checkEndBattle() {
     let victory = true;
     for (let i = 0; i < this.enemies.length; i++) {
@@ -177,6 +174,7 @@ const Unit = new Phaser.Class({
   initialize: function Unit(scene, x, y, texture, frame, type, hp, damage) {
     Phaser.GameObjects.Sprite.call(this, scene, x, y, texture, frame);
     this.type = type;
+    // eslint-disable-next-line no-multi-assign
     this.maxHp = this.hp = hp;
     this.damage = damage;
     this.living = true;
