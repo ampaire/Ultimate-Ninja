@@ -1,9 +1,10 @@
+/* eslint-disable no-use-before-define */
 /* eslint-disable prefer-destructuring */
 /* eslint-disable no-plusplus */
-/* eslint-disable no-use-before-define */
 /* eslint-disable no-unused-vars */
 /* eslint-disable import/no-mutable-exports */
 /* eslint-disable import/no-cycle */
+/* eslint-disable import/no-unresolved */
 
 import Phaser from 'phaser';
 import HealthBar from '../helpers/healthBar';
