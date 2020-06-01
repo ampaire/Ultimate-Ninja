@@ -7,7 +7,7 @@ export default class BootScene extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image('master', 'assets/master.png');
+    this.load.image('monster', 'assets/monster.png');
     this.load.audio('bgMusic', ['assets/sounds/battleTheme.mp3']);
   }
 

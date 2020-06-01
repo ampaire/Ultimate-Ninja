@@ -44,7 +44,7 @@ export default class CreditsScene extends Phaser.Scene {
     this.explain3 = this.add.text(
       0,
       0,
-      'in the Javascript section of the program.',
+      'in the Javascript curriculum.',
       { fontSize: '24px', fill: '#fff' },
     );
     this.inspiration = this.add.text(0, 0, 'Special Credit: Microverse curriculum team', {
@@ -54,6 +54,14 @@ export default class CreditsScene extends Phaser.Scene {
     this.assets = this.add.text(0, 0, 'Sound and Music: OpenGameArt', {
       fontSize: '18px',
       fill: '#fff',
+    });
+    this.social1 = this.add.text(0, 0, 'Follow me on Github: @ampaire,', {
+      fontSize: '18px',
+      fill: '#FFDF00',
+    });
+    this.social2 = this.add.text(0, 0, 'Twitter: AmpaPhem, LinkedIn: Phemia Ampaire', {
+      fontSize: '18px',
+      fill: '#FFDF00',
     });
     this.zone = this.add.zone(
       config.width / 2,
@@ -71,6 +79,8 @@ export default class CreditsScene extends Phaser.Scene {
       this.explain1,
       this.explain2,
       this.explain3,
+      this.social1,
+      this.social2,
     ].forEach((el) => {
       Phaser.Display.Align.In.Center(el, this.zone);
     });
@@ -83,5 +93,7 @@ export default class CreditsScene extends Phaser.Scene {
     this.creditsText.setY(250);
     this.inspiration.setY(290);
     this.assets.setY(320);
+    this.social1.setY(350);
+    this.social2.setY(380);
   }
 }
