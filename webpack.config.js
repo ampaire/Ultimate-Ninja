@@ -1,26 +1,40 @@
+/* eslint-disable import/no-unresolved */
+
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   entry: './src/index.js',
+
   output: {
-    filename: 'main.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'build'),
+    publicPath: '/build/',
+    filename: 'project.bundle.js',
   },
+
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        test: [/\.vert$/, /\.frag$/],
+        use: 'raw-loader',
       },
       {
-        test: /\.(png|svg|jpg|gif|jpeg)$/,
-        use: ['file-loader'],
-      },
-      {
-        test: /\.(png|jpg)$/,
-        include: path.join(__dirname, 'dist/media'),
-        loader: 'file-loader',
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
       },
     ],
   },
+
+  plugins: [
+    new webpack.DefinePlugin({
+      CANVAS_RENDERER: JSON.stringify(true),
+      WEBGL_RENDERER: JSON.stringify(true),
+    }),
+  ],
 };
