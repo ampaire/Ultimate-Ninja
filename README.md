@@ -16,8 +16,7 @@ This project's objective was to build a platform game similar [GameDev Academy](
 
 Assignment [Link](https://www.notion.so/RPG-game-f94a617841e240a293c0b6928beebe89).
 
-## ✨ Live link
-[link](https://affectionate-joliot-463312.netlify.app/)
+## ✨ [Demo Link](https://affectionate-joliot-463312.netlify.app/)
 
 ## How to play the game
 - Enter your name and click on the start button
@@ -35,7 +34,7 @@ Assignment [Link](https://www.notion.so/RPG-game-f94a617841e240a293c0b6928beebe8
 
 
 ## Design and thinking
-This is a turn based role play game. The objective of this game is to give players a chance to enjoy a fun but also leveling game to give them a feel of progression and at the same time challenge as they fight the different characters dubbed as enemies.
+Ultimate Ninja is a turn based role play game. The objective of this game is not only to give players a chance to enjoy playing for fun but also levelling the game to give them a feel of progression and at the same time challenge as they fight the different characters dubbed as enemies.
 
 This is how I designed my game: 
 - In the first two days, I had a lot of ideas for a game in my mind. I thought of creating this cool 3D game with characters fighting but I ended up creating a game where there are two game characters on one side fighting enemies on the other side. 
